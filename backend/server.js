@@ -15,7 +15,8 @@ app.use('/item', itemController);
 app.use('/auction', auctionController);
 
 
-app.listen(5000, () => {
-    connect();
-    console.log('listening on port 5000');
-});
+app.listen(process.env.PORT || 5000
+    , () => {
+        connect();
+        console.log('listening on port 5000');
+    });
